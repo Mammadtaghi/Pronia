@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Pixelify+Sans&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header start -->
+    <header>
+        <!-- Green Line start -->
+        <div class="greenLine">
+            <div class="headerContainer center">
+
+                <!-- GreenLine left Side start -->
+                <span class="headerLeft hello">Hello Everyone! 25% Off All Products</span>
+                <!-- GreenLine left Side end -->
+
+                <!-- GreenLine Right Side start -->
+                <div class="headerRight">
+                    <!-- Currency Select start -->
+                    <select name="currency" id="currencySelect">
+                        <option value="usd">USD</option>
+                        <option value="gbp">GBP</option>
+                        <option value="iso">ISO</option>
+                    </select>
+                    <!-- Currency Select end -->
+
+                    <!-- Language Select start -->
+                    <select name="language" id="languageSelect">
+                        <option value="english">English</option>
+                        <option value="turkish">Turkish</option>
+                        <option value="italian">Italian</option>
+                        <option value="french">French</option>
+                    </select>
+                    <!-- Language Select end -->
+                </div>
+                <!-- GreenLine Right Side end -->
+
+            </div>
+        </div>
+        <!-- Green Line end -->
+
+        <!-- Head Div start -->
+        <div class="headDiv">
+            <div class="headDivContainer">
+                <!-- Head Div Left Side start -->
+                <div class="headDivLeft">
+                    <div class="phoneIcon"><i class="fa-solid fa-phone"></i></div>
+                    <a href="tel:+00 123 456 789" type="" class="phoneNumber">+00 123 456 789</a>
+                </div>
+                <!-- Head Div Left Side end -->
+
+                <!-- Middle Image start -->
+                <a href="index.html"><img src="https://htmldemo.net/pronia/pronia/assets/images/logo/dark.png"
+                        alt=""></a>
+                <!-- Middle Image end  -->
+
+                <!-- Head Div Right Side start -->
+                <div class="headDivRight">
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#"><i class="fa-solid fa-users"></i></a>
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-basket-shopping">
+                                <div class="shopBagItemCount">3</div>
+                            </i></a>
+                        <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                </div>
+                <!-- Head Div Right Side end -->
+
+            </div>
+        </div>
+        <!-- Head Div end -->
+
+        <!-- Modal start -->
+        <div class="searchModal">
+
+            <!-- Modal Close Button start -->
+            <div class="modalCloseBtn"><i class="fa-solid fa-xmark xMark"></i></div>
+            <!-- Modal Close Button end -->
+
+            <!-- The Rest Of The Modal start -->
+            <div class="modalContainer">
+
+                <h3 class="modalTitle">Start typing and press Enter to search or ESC to close</h3>
+
+                <div class="inputDiv">
+                    <input id="modalSearchInput" type="text" title="DefalutValue">
+                    <i class="fa-solid fa-magnifying-glass modalSearchIcon"></i>
+                </div>
+
+            </div>
+            <!-- The Rest Of The Modal end -->
+
+        </div>
+        <!-- Modal end -->
+
+        <hr>
+
+        <!-- Wishlist start -->
+        <div class="wishlist">
+
+            <!-- Wishlist Heading start -->
+            <div class="wishlistHeading">
+
+                <h2 class="wishlistTitle">Shopping Cart</h2>
+
+                <div class="wishlistCloseBtn"><i class="fa-solid fa-xmark wishlistCloseIcon"></i></div>
+
+            </div>
+            <!-- Wishlist Heading end -->
+
+            <!-- Wishlist Product Container start -->
+            <div class="wishlistProductContainer"></div>
+            <!-- Wishlist Product Container end -->
+
+            <!-- Subtotal start -->
+            <div class="subtotalDiv">
+
+                <span class="subtotalText">Subtotal</span>
+
+                <span class="totalPrice">0$</span>
+
+            </div>
+            <!-- Subtotal end -->
+
+            <!-- Wishlist Buttons start -->
+            <div class="wishlistButtons">
+
+                <button class="viewCart wishlistBtn">ViewCart</button>
+
+                <button class="checkout wishlistBtn">Checkout</button>
+
+            </div>
+            <!-- Wishlist Buttons end -->
+
+        </div>
+        <!-- Wishlist end -->
+
+        <!-- Home Nav start -->
+        <nav id="nav">
+            <div class="navContainer">
+
+                <ul class="navList">
+                    <!-- Home start -->
+                    <li class="navItem"><a class="navAnchor" href="#">Home</a>
+                        <div id="homeSubNav" class="subNav">
+                            <ul>
+                                <li><a href="#">Home one</a></li>
+                                <li><a href="#">Home Two</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Home end -->
+
+                    <!-- Shop start -->
+                    <li class="navItem"><a class="navAnchor" href="#">Shop</a>
+                        <div id="shopSubNav" class="subNav">
+
+                            <!-- Shop Layout start -->
+                            <div class="shopLayout">
+                                <h3>Shop Layout</h3>
+                                <ul class="layoutList">
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                </ul>
+                            </div>
+                            <!-- Shop layout end -->
+
+                            <div class="shopLine"></div>
+
+                            <!-- Product Style start -->
+                            <div class="productStyle">
+                                <h3>Product Style</h3>
+                                <ul class="styleList">
+                                    <li><a href="#">Style</a></li>
+                                    <li><a href="#">Style</a></li>
+                                    <li><a href="#">Style</a></li>
+                                    <li><a href="#">Style</a></li>
+                                    <li><a href="#">Style</a></li>
+                                    <li><a href="#">Style</a></li>
+                                </ul>
+                            </div>
+                            <!-- Product Style end -->
+
+                            <div class="shopLine"></div>
+
+                            <!-- Product Related start -->
+                            <div class="productRelated">
+                                <h3>Product Related</h3>
+                                <ul class="relatedList">
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Product</a></li>
+                                </ul>
+                            </div>
+                            <!-- Product Related end -->
+                        </div>
+                    </li>
+                    <!-- Shop end -->
+
+                    <!-- Blog start -->
+                    <li class="navItem"><a class="navAnchor" href="#">Blog</a>
+                        <div id="blogSubNav" class="subNav">
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Blog end -->
+
+                    <!-- About Us start -->
+                    <li class="navItem"><a class="navAnchor" href="#">About Us</a></li>
+                    <!-- About Us end -->
+
+                    <!-- Pages start -->
+                    <li class="navItem"><a class="navAnchor" href="#">Pages</a>
+                        <div id="pagesSubNav" class="subNav">
+                            <ul>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Pages end -->
+
+                    <!-- Contact Us start -->
+                    <li class="navItem"><a class="navAnchor" href="#">Contact Us</a></li>
+                    <!-- Contact Us end -->
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- Home Nav end -->
+
+        <!-- Side Nav start -->
+        <nav id="sideNav">
+
+            <!-- Close Button start -->
+            <div class="xMark padding-left"><i class="fa-solid fa-xmark sideNavCloseIcon"></i></div>
+            <!-- Close button end -->
+
+            <!-- Phone Line start -->
+            <div class="sideNavPhone padding-left">
+
+                <div class="phoneIcon"><i class="fa-solid fa-phone"></i></div>
+                <a href="tel:+00 123 456 789" class="phoneNumber">+00 123 456 789</a>
+
+            </div>
+            <!-- Phone Line end -->
+
+            <!-- Currency And Icons start -->
+            <div class="currencyAndIcons padding-left">
+
+                <!-- Currency Select start -->
+                <select name="currency" id="currencySelect">
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                    <option value="iso">ISO</option>
+                </select>
+                <!-- Currency Select end -->
+
+                <!-- Language Select start -->
+                <select name="language" id="languageSelect">
+                    <option value="english">English</option>
+                    <option value="turkish">Turkish</option>
+                    <option value="italian">Italian</option>
+                    <option value="french">French</option>
+                </select>
+                <!-- Language Select end -->
+
+                <!-- Users Icon start -->
+                <div class="users">
+                    <i class="fa-solid fa-users sideUsers"> &#709;</i>
+                    <div class="usersListDiv">
+                        <ul class="usersList">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Login | Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Users Icon end -->
+
+                <!-- Heart Icon start -->
+                <div class="heartDiv">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <!-- Heart Icon end -->
+
+            </div>
+            <!-- Currency And Icons end -->
+
+            <!-- Side nav List start -->
+            <div class="sideNavListDiv">
+
+                <!-- Home Dropdown start -->
+                <div class="homeDropdown sideDropdown">
+                    <div class="dropdownTitle padding-left"><span class="dropdownName">Home</span> <i
+                            class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                    <div class="dropdownMenu padding-left">
+                        <ul>
+                            <li><a href="#">Home One</a></li>
+                            <li><a href="#">Home Two</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Home Dropdown end -->
+
+                <!-- Shop Dropdown start -->
+                <div class="shopDropdown sideDropdown">
+                    <div class="dropdownTitle padding-left"><span class="dropdownName">Shop</span> <i
+                            class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                    <div class="dropdownMenu padding-left">
+                        <!-- Shop Layout Inner Dropdown start -->
+                        <div class="innerMenu">
+                            <div class="innerMenuTitle"><span class="innerMenuName">Shop Layout</span><i
+                                    class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                            <div class="innerDropdownMenu">
+                                <ul class="innerDropdownList">
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Shop Layout Inner Dropdown end -->
+
+                        <!-- Product Style Inner Dropdown start -->
+                        <div class="innerMenu">
+                            <div class="innerMenuTitle"><span class="innerMenuName">Product Style</span><i
+                                    class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                            <div class="innerDropdownMenu">
+                                <ul class="innerDropdownList">
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Product Style Inner Dropdown end -->
+
+                        <!-- Product Related Inner Dropdown start -->
+                        <div class="innerMenu">
+                            <div class="innerMenuTitle"><span class="innerMenuName">Product Related</span><i
+                                    class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                            <div class="innerDropdownMenu">
+                                <ul class="innerDropdownList">
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                    <li><a href="#">Some Text</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Product Style Inner Dropdown end -->
+                    </div>
+                </div>
+                <!-- Shop Dropdown end -->
+
+                <!-- Blog Dropdown start -->
+                <div class="blogDropdown sideDropdown">
+                    <div class="dropdownTitle padding-left"><span class="dropdownName">Blog</span> <i
+                            class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                    <div class="dropdownMenu padding-left">
+                        <div class="menuHolder">
+                            <ul>
+                                <li><a href="#">Blog 1</a></li>
+                                <li><a href="#">Blog 2</a></li>
+                                <li><a href="#">Blog 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Dropdown end -->
+
+                <!-- About Us start -->
+                <div class="sideNavAboutUs padding-left"><a href="#">About Us</a></div>
+                <!-- About us end -->
+
+                <!-- Pages Dropdown start -->
+                <div class="pagesDropdown sideDropdown">
+                    <div class="dropdownTitle padding-left"><span class="dropdownName">Pages</span> <i
+                            class="dropdownIcon fa-solid fa-angle-down"></i></div>
+                    <div class="dropdownMenu padding-left">
+                        <ul>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Error 404</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Pages Dropdown end -->
+
+                <!-- Contact start -->
+                <div class="sideNavContact padding-left"><a href="#">Contact</a></div>
+                <!-- Contact end -->
+            </div>
+            <!-- Side nav List end -->
+        </nav>
+        <!-- Side Nav end -->
+
+    </header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>
+
+        <!-- Discover start -->
+        <section id="discover">
+            <!-- Discover Container start -->
+            <div class="discoverContainer">
+
+                <!-- Discover Left Arrow start -->
+                <div class="discoverLeftArrow discoverArrow" onclick="changeImgLeft()"><i class="fa-solid fa-angle fa-angle-left"></i></div>
+                <!-- Discover Left Arrow end -->
+
+                <!-- Discover left start -->
+                <div class="discoverLeft">
+
+                    <h2 class="discoverOffer">65% OFF</h2>
+
+                    <h1 class="discoverTitle">New Plant</h1>
+
+                    <p class="discoverInfo">Pronia, With Difficult Navs</p>
+
+                    <button class="discoverBtn">Discover Now</button>
+
+                </div>
+                <!-- Discover Left end -->
+
+                <!-- Discover Right start -->
+                <div class="discoverRight">
+
+                    <img class="discoverSlider" src="" alt="PlantShow">
+
+                </div>
+                <!-- Discover Right end -->
+
+                <!-- Discover Right Arrow start -->
+                <div class="discoverRightArrow discoverArrow" onclick="changeImgRight()"><i class="fa-solid fa-angle fa-angle-right"></i></div>
+                <!-- Discover Right Arrow end -->
+
+            </div>
+            <!-- Discover Container end -->
+        </section>
+        <!-- Discover end -->
+
+        <!-- Products start -->
+        <section id="products">
+
+            <!-- Features start -->
+            <div class="features">
+
+                <!-- Feature Free Shipping start -->
+                <div class="featureDiv">
+                    <img src="assets/images/Feature1.png" alt="" class="featureImg">
+                    <div class="featureText">
+                        <h3 class="featureTitle">Free Shipping</h3>
+                        <span class="featureInfo">Capped at $319 per order</span>
+                    </div>
+                </div>
+                <!-- Feature Free Shipping end -->
+
+                <!-- Feature Safe payment start -->
+                <div class="featureDiv">
+                    <img src="assets/images/Feature2.png" alt="" class="featureImg">
+                    <div class="featureText">
+                        <h3 class="featureTitle">Safe Payment</h3>
+                        <span class="featureInfo">With our payment gateway</span>
+                    </div>
+                </div>
+                <!-- Feature Safe payment end -->
+
+                <!-- Feature Best Services start -->
+                <div class="featureDiv">
+                    <img src="assets/images/Feature3.png" alt="" class="featureImg">
+                    <div class="featureText">
+                        <h3 class="featureTitle">Best Services</h3>
+                        <span class="featureInfo">Friendly & Supper Services</span>
+                    </div>
+                </div>
+                <!-- Feature Best Services end -->
+
+            </div>
+            <!-- Features end -->
+
+            <!-- Our Products start -->
+            <div class="ourProductsDiv">
+
+                <h1 class="ourProductTitle">OUR PRODUCTS</h1>
+
+                <!-- Product Tabs start -->
+                <div class="productTabs">
+                
+                    <!-- Feartured Tab start -->
+                    <div class="productTabDiv">
+                        <h3 class="productTabTitle">Featured</h3>
+                    </div>
+                    <!-- Featured Tab end -->
+
+                    <!-- Bestseller Tab start -->
+                    <div class="productTabDiv">
+                        <h3 class="productTabTitle">Bestseller</h3>
+                    </div>
+                    <!-- Bestseller Tab end -->
+                    
+                    <!-- Latest Tab start -->
+                    <div class="productTabDiv">
+                        <h3 class="productTabTitle">Latest</h3>
+                    </div>
+                    <!-- Latest Tab end -->
+
+                </div>
+                <!-- Product Tabs end -->
+
+                <!-- Product Items start -->
+                <div class="productItemsDiv"></div>
+                <!-- Product Items end -->
+
+            </div>
+            <!-- Our products end -->
+
+            <!-- Plant Collections start -->
+            <div class="productColletions">
+
+
+
+            </div>
+            <!-- Plant Collections end -->
+
+        </section>
+        <!-- Products end -->
+
+        <section></section>
+        <section></section>
+        <section></section>
+
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer></footer>
+    <!-- Footer end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

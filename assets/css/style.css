@@ -1,0 +1,1544 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+select:focus {
+  border: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span, a, select, option {
+  font-family: "Fuggles", cursive;
+  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .greenLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .greenLine .headerContainer .headerLeft {
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select {
+  border: 0px;
+  background-color: transparent;
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select option {
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer .headerLeft,
+header .greenLine .headerContainer .headerRight {
+  padding: 20px 0px;
+}
+header .headDiv {
+  display: flex;
+  justify-content: center;
+}
+header .headDiv .headDivContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headDiv .headDivContainer .headDivLeft,
+header .headDiv .headDivContainer .headDivRight {
+  padding: 40px 0px;
+}
+header .headDiv .headDivContainer .headDivLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
+  font-size: 20px;
+  color: white;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneNumber {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight {
+  display: flex;
+}
+header .headDiv .headDivContainer .headDivRight .icons a {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+  display: none;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i {
+  margin: 0px 5px;
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i:hover {
+  color: aquamarine;
+  transition: 0.2s;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-basket-shopping {
+  position: relative;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-basket-shopping .shopBagItemCount {
+  width: 23px;
+  height: 23px;
+  background-color: rgba(135, 232, 16, 0.9);
+  border-radius: 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+header .searchModal {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: -20%;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.4s;
+}
+header .searchModal .modalCloseBtn {
+  margin: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-180deg);
+  transition: 0.8s;
+}
+header .searchModal .modalCloseBtn:hover {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
+header .searchModal .modalCloseBtn .xMmark {
+  font-size: 40px;
+}
+header .searchModal .modalContainer {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+header .searchModal .modalContainer .modalTitle {
+  font-weight: 300;
+  font-size: 30px;
+}
+header .searchModal .modalContainer .inputDiv {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+}
+header .searchModal .modalContainer .inputDiv #modalSearchInput {
+  width: 800px;
+  height: 100px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: transparent;
+  outline: none;
+  box-shadow: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+header .searchModal .modalContainer .inputDiv .modalSearchIcon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+header .wishlist {
+  width: 450px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  right: -450px;
+  padding: 55px 60px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.7s;
+}
+header .wishlist .wishlistHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+header .wishlist .wishlistHeading .wishlistTitle {
+  color: black;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn .wishlistCloseIcon {
+  font-size: 25px;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn .wishlistCloseIcon:hover {
+  color: rgba(135, 232, 16, 0.9);
+  transition: 0.5s;
+}
+header .wishlist .wishlistProductContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow: auto;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct {
+  width: 100%;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductImg {
+  width: 70px;
+  height: 78px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 10px 0px 20px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .wishlistProductName {
+  font-size: 16px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .closeBtn {
+  cursor: pointer;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .closeBtn:hover {
+  color: rgba(135, 232, 16, 0.9);
+  transition: 0.3s;
+}
+header .wishlist .wishlistProductContainer .wishlistLine {
+  border-bottom: 1px solid grey;
+}
+header .wishlist .subtotalDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+}
+header .wishlist .subtotalDiv .subtotalText {
+  font-size: 20px;
+  color: black;
+}
+header .wishlist .subtotalDiv .totalPrice {
+  color: black;
+}
+header .wishlist .wishlistButtons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+header .wishlist .wishlistButtons .wishlistBtn {
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+header .wishlist .wishlistButtons .wishlistBtn:hover {
+  background-color: rgba(135, 232, 16, 0.9);
+}
+header #nav {
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer .navList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #nav .navContainer .navList .navItem {
+  position: relative;
+  padding: 15px 0px;
+  font-size: 17px;
+}
+header #nav .navContainer .navList .navItem:hover .navAnchor {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.2s;
+}
+header #nav .navContainer .navList .navItem:hover .subNav {
+  display: flex;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: 1s;
+}
+header #nav .navContainer .navList .navItem .subNav {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover {
+  transform: translateX(8px);
+  transition: 0.5s;
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.3s;
+}
+header #nav .navContainer .navList .navItem #homeSubNav {
+  width: 120px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav {
+  column-gap: 20px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav .shopLine {
+  width: 1px;
+  background-color: grey;
+}
+header #sideNav {
+  display: none;
+}
+
+#discover {
+  width: 100%;
+  background-color: wheat;
+}
+#discover .discoverContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#discover .discoverContainer:hover .discoverArrow {
+  opacity: 1;
+}
+#discover .discoverContainer .discoverArrow {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0;
+  transition: 0.3s;
+}
+#discover .discoverContainer .discoverArrow .fa-angle {
+  color: white;
+  font-size: 40px;
+}
+#discover .discoverContainer .discoverLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#discover .discoverContainer .discoverLeft .discoverOffer {
+  font-size: 50px;
+  font-weight: 300;
+}
+#discover .discoverContainer .discoverLeft .discoverTitle {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+#discover .discoverContainer .discoverLeft .discoverInfo {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+#discover .discoverContainer .discoverLeft .discoverBtn {
+  width: 210px;
+  height: 65px;
+  font-size: 25px;
+  color: white;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 30px;
+  border: 0px;
+  cursor: pointer;
+}
+#discover .discoverContainer .discoverLeft .discoverBtn:hover {
+  background-color: grey;
+  transition: 0.2s;
+}
+#discover .discoverContainer .discoverRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#discover .discoverContainer .discoverRight img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#products .features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  column-gap: 50px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+}
+#products .features .featureDiv {
+  display: flex;
+  column-gap: 20px;
+  border: 2px dashed rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+  padding: 25px 30px;
+}
+#products .features .featureDiv .featureText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#products .ourProductsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+#products .ourProductsDiv .ourProductTitle {
+  font-size: 40px;
+  position: relative;
+  padding: 0px 90px;
+}
+#products .ourProductsDiv .ourProductTitle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background-color: rgb(139, 224, 11);
+}
+#products .ourProductsDiv .ourProductTitle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 70px;
+  height: 2px;
+  background-color: rgb(139, 224, 11);
+}
+#products .ourProductsDiv .productTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0px;
+  column-gap: 25px;
+  row-gap: 25px;
+  flex-wrap: wrap;
+}
+#products .ourProductsDiv .productTabs .productTabDiv {
+  cursor: pointer;
+  padding: 10px 25px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#products .ourProductsDiv .productTabs .productTabDiv:hover {
+  border: 2px dashed rgba(135, 232, 16, 0.6);
+}
+#products .ourProductsDiv .productTabs .productTabDiv:hover .productTabTitle {
+  color: rgba(135, 232, 16, 0.6);
+}
+#products .ourProductsDiv .productTabs .productTabDiv .productTabTitle {
+  font-weight: 300;
+}
+#products .ourProductsDiv .productItemsDiv {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 20px;
+}
+#products .ourProductsDiv .productItemsDiv .product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+#products .ourProductsDiv .productItemsDiv .product .productImgDiv .productImg {
+  width: 265px;
+  height: 295px;
+}
+
+@media screen and (max-width: 992px) {
+  header .greenLine {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivLeft {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-users,
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-heart {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+    display: inline;
+  }
+  header #nav {
+    display: none;
+  }
+  header #sideNav {
+    display: block;
+    width: 320px;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.8);
+    position: fixed;
+    top: 0px;
+    left: -350px;
+    transition: left 0.5s;
+  }
+  header #sideNav .padding-left {
+    padding-left: 30px;
+  }
+  header #sideNav .xMark {
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  header #sideNav .xMark .fa-xmark {
+    font-size: 30px;
+  }
+  header #sideNav .sideNavPhone {
+    display: flex;
+    align-items: center;
+  }
+  header #sideNav .sideNavPhone .phoneIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(135, 232, 16, 0.9);
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  header #sideNav .sideNavPhone .phoneIcon .fa-phone {
+    font-size: 20px;
+    color: white;
+  }
+  header #sideNav .sideNavPhone a {
+    color: white;
+    font-size: 20px;
+  }
+  header #sideNav .currencyAndIcons {
+    display: flex;
+    column-gap: 5px;
+  }
+  header #sideNav .currencyAndIcons select {
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    color: white;
+  }
+  header #sideNav .currencyAndIcons select option {
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 0px;
+  }
+  header #sideNav .currencyAndIcons .users {
+    position: relative;
+    margin: 10px 0;
+  }
+  header #sideNav .currencyAndIcons .users .fa-users {
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv {
+    display: none;
+    width: 160px;
+    position: absolute;
+    left: -10px;
+    padding: 15px;
+    background-color: black;
+    border-radius: 4px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv .usersList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  header #sideNav .currencyAndIcons .heartDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #sideNav .currencyAndIcons .heartDiv .fa-heart {
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown {
+    width: 100%;
+    margin: 10px 0;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover .dropdownName {
+    transform: translateX(30px);
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownMenu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideNavContact a,
+  header #sideNav .sideNavListDiv .sideNavAboutUs a {
+    font-size: 25px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu {
+    display: flex;
+    flex-direction: column;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle:hover .innerMenuName {
+    transform: translateX(30px);
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .innerMenuName, header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .dropdownIcon {
+    font-size: 20px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .dropdownIcon {
+    padding-right: 30px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerDropdownMenu {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s;
+  }
+  #discover {
+    width: 100%;
+    background-color: wheat;
+  }
+  #discover .discoverContainer {
+    flex-direction: column;
+    padding: 100px 0px;
+  }
+  #discover .discoverContainer:hover .discoverArrow {
+    opacity: 1;
+  }
+  #discover .discoverContainer .discoverArrow {
+    display: none;
+  }
+  #discover .discoverContainer .discoverLeft {
+    order: 1;
+    align-items: center;
+  }
+  #discover .discoverContainer .discoverLeft .discoverOffer {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #discover .discoverContainer .discoverLeft .discoverTitle {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  #discover .discoverContainer .discoverLeft .discoverInfo {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  #discover .discoverContainer .discoverLeft .discoverBtn {
+    width: 210px;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(135, 232, 16, 0.6);
+    border-radius: 30px;
+    border: 0px;
+    cursor: pointer;
+  }
+  #discover .discoverContainer .discoverLeft .discoverBtn:hover {
+    background-color: grey;
+    transition: 0.2s;
+  }
+  #discover .discoverContainer .discoverRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #discover .discoverContainer .discoverRight img {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: -20%;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+    z-index: 2;
+  }
+}
+.display {
+  display: flex !important;
+}
+
+.maxHeight {
+  max-height: 230px !important;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .greenLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .greenLine .headerContainer .headerLeft {
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select {
+  border: 0px;
+  background-color: transparent;
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select option {
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer .headerLeft,
+header .greenLine .headerContainer .headerRight {
+  padding: 20px 0px;
+}
+header .headDiv {
+  display: flex;
+  justify-content: center;
+}
+header .headDiv .headDivContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headDiv .headDivContainer .headDivLeft,
+header .headDiv .headDivContainer .headDivRight {
+  padding: 40px 0px;
+}
+header .headDiv .headDivContainer .headDivLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
+  font-size: 20px;
+  color: white;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneNumber {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight {
+  display: flex;
+}
+header .headDiv .headDivContainer .headDivRight .icons a {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+  display: none;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i {
+  margin: 0px 5px;
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i:hover {
+  color: aquamarine;
+  transition: 0.2s;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-basket-shopping {
+  position: relative;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-basket-shopping .shopBagItemCount {
+  width: 23px;
+  height: 23px;
+  background-color: rgba(135, 232, 16, 0.9);
+  border-radius: 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+header .searchModal {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: -20%;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.4s;
+}
+header .searchModal .modalCloseBtn {
+  margin: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-180deg);
+  transition: 0.8s;
+}
+header .searchModal .modalCloseBtn:hover {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
+header .searchModal .modalCloseBtn .xMmark {
+  font-size: 40px;
+}
+header .searchModal .modalContainer {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+header .searchModal .modalContainer .modalTitle {
+  font-weight: 300;
+  font-size: 30px;
+}
+header .searchModal .modalContainer .inputDiv {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+}
+header .searchModal .modalContainer .inputDiv #modalSearchInput {
+  width: 800px;
+  height: 100px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: transparent;
+  outline: none;
+  box-shadow: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+header .searchModal .modalContainer .inputDiv .modalSearchIcon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+header .wishlist {
+  width: 450px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  right: -450px;
+  padding: 55px 60px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.7s;
+}
+header .wishlist .wishlistHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+header .wishlist .wishlistHeading .wishlistTitle {
+  color: black;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn .wishlistCloseIcon {
+  font-size: 25px;
+}
+header .wishlist .wishlistHeading .wishlistCloseBtn .wishlistCloseIcon:hover {
+  color: rgba(135, 232, 16, 0.9);
+  transition: 0.5s;
+}
+header .wishlist .wishlistProductContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow: auto;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct {
+  width: 100%;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductImg {
+  width: 70px;
+  height: 78px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 10px 0px 20px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .wishlistProductName {
+  font-size: 16px;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .closeBtn {
+  cursor: pointer;
+}
+header .wishlist .wishlistProductContainer .wishlistProduct .wishlistProductTextBox .headLine .closeBtn:hover {
+  color: rgba(135, 232, 16, 0.9);
+  transition: 0.3s;
+}
+header .wishlist .wishlistProductContainer .wishlistLine {
+  border-bottom: 1px solid grey;
+}
+header .wishlist .subtotalDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+}
+header .wishlist .subtotalDiv .subtotalText {
+  font-size: 20px;
+  color: black;
+}
+header .wishlist .subtotalDiv .totalPrice {
+  color: black;
+}
+header .wishlist .wishlistButtons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+header .wishlist .wishlistButtons .wishlistBtn {
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+header .wishlist .wishlistButtons .wishlistBtn:hover {
+  background-color: rgba(135, 232, 16, 0.9);
+}
+header #nav {
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer .navList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #nav .navContainer .navList .navItem {
+  position: relative;
+  padding: 15px 0px;
+  font-size: 17px;
+}
+header #nav .navContainer .navList .navItem:hover .navAnchor {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.2s;
+}
+header #nav .navContainer .navList .navItem:hover .subNav {
+  display: flex;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: 1s;
+}
+header #nav .navContainer .navList .navItem .subNav {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover {
+  transform: translateX(8px);
+  transition: 0.5s;
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.3s;
+}
+header #nav .navContainer .navList .navItem #homeSubNav {
+  width: 120px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav {
+  column-gap: 20px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav .shopLine {
+  width: 1px;
+  background-color: grey;
+}
+header #sideNav {
+  display: none;
+}
+
+#discover {
+  width: 100%;
+  background-color: wheat;
+}
+#discover .discoverContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#discover .discoverContainer:hover .discoverArrow {
+  opacity: 1;
+}
+#discover .discoverContainer .discoverArrow {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0;
+  transition: 0.3s;
+}
+#discover .discoverContainer .discoverArrow .fa-angle {
+  color: white;
+  font-size: 40px;
+}
+#discover .discoverContainer .discoverLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#discover .discoverContainer .discoverLeft .discoverOffer {
+  font-size: 50px;
+  font-weight: 300;
+}
+#discover .discoverContainer .discoverLeft .discoverTitle {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+#discover .discoverContainer .discoverLeft .discoverInfo {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+#discover .discoverContainer .discoverLeft .discoverBtn {
+  width: 210px;
+  height: 65px;
+  font-size: 25px;
+  color: white;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 30px;
+  border: 0px;
+  cursor: pointer;
+}
+#discover .discoverContainer .discoverLeft .discoverBtn:hover {
+  background-color: grey;
+  transition: 0.2s;
+}
+#discover .discoverContainer .discoverRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#discover .discoverContainer .discoverRight img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#products .features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  column-gap: 50px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+}
+#products .features .featureDiv {
+  display: flex;
+  column-gap: 20px;
+  border: 2px dashed rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+  padding: 25px 30px;
+}
+#products .features .featureDiv .featureText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#products .ourProductsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+#products .ourProductsDiv .ourProductTitle {
+  font-size: 40px;
+  position: relative;
+  padding: 0px 90px;
+}
+#products .ourProductsDiv .ourProductTitle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background-color: rgb(139, 224, 11);
+}
+#products .ourProductsDiv .ourProductTitle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 70px;
+  height: 2px;
+  background-color: rgb(139, 224, 11);
+}
+#products .ourProductsDiv .productTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0px;
+  column-gap: 25px;
+  row-gap: 25px;
+  flex-wrap: wrap;
+}
+#products .ourProductsDiv .productTabs .productTabDiv {
+  cursor: pointer;
+  padding: 10px 25px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#products .ourProductsDiv .productTabs .productTabDiv:hover {
+  border: 2px dashed rgba(135, 232, 16, 0.6);
+}
+#products .ourProductsDiv .productTabs .productTabDiv:hover .productTabTitle {
+  color: rgba(135, 232, 16, 0.6);
+}
+#products .ourProductsDiv .productTabs .productTabDiv .productTabTitle {
+  font-weight: 300;
+}
+#products .ourProductsDiv .productItemsDiv {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 20px;
+}
+#products .ourProductsDiv .productItemsDiv .product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+#products .ourProductsDiv .productItemsDiv .product .productImgDiv .productImg {
+  width: 265px;
+  height: 295px;
+}
+
+@media screen and (max-width: 992px) {
+  header .greenLine {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivLeft {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-users,
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-heart {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+    display: inline;
+  }
+  header #nav {
+    display: none;
+  }
+  header #sideNav {
+    display: block;
+    width: 320px;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.8);
+    position: fixed;
+    top: 0px;
+    left: -350px;
+    transition: left 0.5s;
+  }
+  header #sideNav .padding-left {
+    padding-left: 30px;
+  }
+  header #sideNav .xMark {
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  header #sideNav .xMark .fa-xmark {
+    font-size: 30px;
+  }
+  header #sideNav .sideNavPhone {
+    display: flex;
+    align-items: center;
+  }
+  header #sideNav .sideNavPhone .phoneIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(135, 232, 16, 0.9);
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  header #sideNav .sideNavPhone .phoneIcon .fa-phone {
+    font-size: 20px;
+    color: white;
+  }
+  header #sideNav .sideNavPhone a {
+    color: white;
+    font-size: 20px;
+  }
+  header #sideNav .currencyAndIcons {
+    display: flex;
+    column-gap: 5px;
+  }
+  header #sideNav .currencyAndIcons select {
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    color: white;
+  }
+  header #sideNav .currencyAndIcons select option {
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 0px;
+  }
+  header #sideNav .currencyAndIcons .users {
+    position: relative;
+    margin: 10px 0;
+  }
+  header #sideNav .currencyAndIcons .users .fa-users {
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv {
+    display: none;
+    width: 160px;
+    position: absolute;
+    left: -10px;
+    padding: 15px;
+    background-color: black;
+    border-radius: 4px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv .usersList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  header #sideNav .currencyAndIcons .heartDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #sideNav .currencyAndIcons .heartDiv .fa-heart {
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown {
+    width: 100%;
+    margin: 10px 0;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover .dropdownName {
+    transform: translateX(30px);
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownMenu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideNavContact a,
+  header #sideNav .sideNavListDiv .sideNavAboutUs a {
+    font-size: 25px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu {
+    display: flex;
+    flex-direction: column;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle:hover .innerMenuName {
+    transform: translateX(30px);
+    transition: 0.5s;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .innerMenuName, header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .dropdownIcon {
+    font-size: 20px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerMenuTitle .dropdownIcon {
+    padding-right: 30px;
+  }
+  header #sideNav .sideNavListDiv .shopDropdown .dropdownMenu .innerMenu .innerDropdownMenu {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s;
+  }
+  #discover {
+    width: 100%;
+    background-color: wheat;
+  }
+  #discover .discoverContainer {
+    flex-direction: column;
+    padding: 100px 0px;
+  }
+  #discover .discoverContainer:hover .discoverArrow {
+    opacity: 1;
+  }
+  #discover .discoverContainer .discoverArrow {
+    display: none;
+  }
+  #discover .discoverContainer .discoverLeft {
+    order: 1;
+    align-items: center;
+  }
+  #discover .discoverContainer .discoverLeft .discoverOffer {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #discover .discoverContainer .discoverLeft .discoverTitle {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  #discover .discoverContainer .discoverLeft .discoverInfo {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  #discover .discoverContainer .discoverLeft .discoverBtn {
+    width: 210px;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(135, 232, 16, 0.6);
+    border-radius: 30px;
+    border: 0px;
+    cursor: pointer;
+  }
+  #discover .discoverContainer .discoverLeft .discoverBtn:hover {
+    background-color: grey;
+    transition: 0.2s;
+  }
+  #discover .discoverContainer .discoverRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #discover .discoverContainer .discoverRight img {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: -20%;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+    z-index: 2;
+  }
+}
+.display {
+  display: flex !important;
+}
+
+.maxHeight {
+  max-height: 230px !important;
+}/*# sourceMappingURL=style.css.map */

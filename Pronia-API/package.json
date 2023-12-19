@@ -1,0 +1,65 @@
+{
+  "pronia":[
+    {
+        "id": 1,
+        "name": "American Marigold",
+        "img": "assets/images/Plant3.jpg",
+        "price": "23.25",
+        "count": 0
+    },
+    {
+        "id": 2,
+        "name": "Black Eyed Susan",
+        "img": "assets/images/Plant4.jpg",
+        "price": "32.50",
+        "count": 0
+    },
+    {
+        "id": 3,
+        "name": "Bleeding Heart",
+        "img": "assets/images/Plant10.jpg",
+        "price": "30.75",
+        "count": 0
+    },
+    {
+        "id": 4,
+        "name": "Bloody Cranesbill",
+        "img": "assets/images/Plant5.jpg",
+        "price": "40.25",
+        "count": 0
+    },
+    {
+        "id": 5,
+        "name": "Butterfly Weed",
+        "img": "assets/images/Plant6.jpg",
+        "price": "50.50",
+        "count": 0
+    },
+    {
+        "id": 6,
+        "name": "Common Yarrow",
+        "img": "assets/images/Plant7.jpg",
+        "price": "35.25",
+        "count": 0
+    },
+    {
+        "id": 7,
+        "name": "Doublefile Viburnum",
+        "img": "assets/images/Plant8.jpg",
+        "price": "27.00",
+        "count": 0
+    },
+    {
+        "id": 8,
+        "name": "Feather Reed Grass",
+        "img": "assets/images/Plant9.jpg",
+        "price": "55.75",
+        "count": 0
+    }
+  ],
+
+  "basket":[
+    
+  ]
+
+}
